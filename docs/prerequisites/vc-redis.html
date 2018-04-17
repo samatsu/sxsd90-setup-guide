@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>必要なソフトウェア のインストール &mdash; クイックセットアップガイド 1.0 ドキュメント</title>
+  <title>Microsoft Visual C++ 2015 再配布可能パッケージのインストール &mdash; クイックセットアップガイド 1.0 ドキュメント</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="IISのセットアップ" href="iis.html" />
-    <link rel="prev" title="Sitecore 9.0 クイックセットアップガイド" href="../index.html" /> 
+    <link rel="next" title="Sitecore のインストール" href="../installation/index.html" />
+    <link rel="prev" title="SIFに必要なソフトウェアのインストール" href="prep-sif.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,12 +85,15 @@
             
               <p class="caption"><span class="caption-text">コンテンツ:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">必要なソフトウェア のインストール</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">必要なソフトウェア のインストール</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="iis.html">IISのセットアップ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sql-server.html">SQL Serverのセットアップ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solr.html">Solrのセットアップ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prep-sif.html">SIFに必要なソフトウェアのインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vc-redis.html">Microsoft Visual C++ 2015 再配布可能パッケージのインストール</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Microsoft Visual C++ 2015 再配布可能パッケージのインストール</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#microsoft-visual-c-2015-redistributable">Microsoft Visual C++ 2015 Redistributable　のダウンロードとインストール</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Sitecore のインストール</a></li>
@@ -140,7 +143,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>必要なソフトウェア のインストール</li>
+          <li><a href="index.html">必要なソフトウェア のインストール</a> &raquo;</li>
+        
+      <li>Microsoft Visual C++ 2015 再配布可能パッケージのインストール</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -157,40 +162,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>必要なソフトウェア のインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Sitecore をインストールするために必要なソフトウェアをインストールします。</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="iis.html">IISのセットアップ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="iis.html#id1">IISのインストール</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="sql-server.html">SQL Serverのセットアップ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sql-server.html#sql-server-2016">SQL Server 2016 のインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sql-server.html#sql-server-management-studio">SQL Server Management Studio のインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sql-server.html#id1">SQL Server の構成</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="solr.html">Solrのセットアップ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="solr.html#java">Javaのインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="solr.html#id1">Solrのインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="solr.html#id2">Solrの構成</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="prep-sif.html">SIFに必要なソフトウェアのインストール</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="prep-sif.html#powershell">PowerShell のバージョン確認</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prep-sif.html#web-deploy-3-6-for-hosting-servers">Web Deploy 3.6 for Hosting Servers のインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prep-sif.html#url-rewrite-2-1">URL Rewrite 2.1のインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prep-sif.html#dacfx">データ層アプリケーション フレームワーク (17.01 DacFx)のインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prep-sif.html#sql-dom">SQL DOM のインストール</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="vc-redis.html">Microsoft Visual C++ 2015 再配布可能パッケージのインストール</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vc-redis.html#microsoft-visual-c-2015-redistributable">Microsoft Visual C++ 2015 Redistributable　のダウンロードとインストール</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="microsoft-visual-c-2015">
+<h1>Microsoft Visual C++ 2015 再配布可能パッケージのインストール<a class="headerlink" href="#microsoft-visual-c-2015" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore 9.0 Update-1 以降をインストールする場合は、 Microsoft Visual C++ 2015 再頒布可能パッケージ をインストールする必要があります。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Sitecore 9.0 Initial Release をセットアップする場合は、本手順はスキップできます。</p>
+</div>
+<p>Visual Studio 2015 などを同じマシンにインストールしている場合は、すでにインストールされている可能性があります。</p>
+<div class="section" id="microsoft-visual-c-2015-redistributable">
+<h2>Microsoft Visual C++ 2015 Redistributable　のダウンロードとインストール<a class="headerlink" href="#microsoft-visual-c-2015-redistributable" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://www.microsoft.com/ja-jp/download/details.aspx?id=53587">https://www.microsoft.com/ja-jp/download/details.aspx?id=53587</a>  にアクセスして、再配布可能パッケージをダウンロードしてインストールしてください。</p>
 </div>
 </div>
 
@@ -202,10 +184,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="iis.html" class="btn btn-neutral float-right" title="IISのセットアップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../installation/index.html" class="btn btn-neutral float-right" title="Sitecore のインストール" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Sitecore 9.0 クイックセットアップガイド" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="prep-sif.html" class="btn btn-neutral" title="SIFに必要なソフトウェアのインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
