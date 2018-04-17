@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SQL Serverのセットアップ &mdash; クイックセットアップガイド 1.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="検索" href="../search.html"/>
+    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
+        <link rel="up" title="必要なソフトウェア のインストール" href="index.html"/>
+        <link rel="next" title="Solrのセットアップ" href="solr.html"/>
+        <link rel="prev" title="IISのセットアップ" href="iis.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> クイックセットアップガイド
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Sitecore Experience Platform 9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">コンテンツ:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">必要なソフトウェア のインストール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="iis.html">IISのセットアップ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SQL Serverのセットアップ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sql-server-2016">SQL Server 2016 のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sql-server-management-studio">SQL Server Management Studio のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">SQL Server の構成</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="solr.html">Solrのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prep-sif.html">SIFに必要なソフトウェアのインストール</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Sitecore のインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">補足情報</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">クイックセットアップガイド</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">必要なソフトウェア のインストール</a> &raquo;</li>
+        
+      <li>SQL Serverのセットアップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sql-server">
+<h1>SQL Serverのセットアップ<a class="headerlink" href="#sql-server" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SQL Server および SQL Server Management Studio をインストールします。</p>
+<div class="section" id="sql-server-2016">
+<h2>SQL Server 2016 のインストール<a class="headerlink" href="#sql-server-2016" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQL Server 2016 SP1 Developer Edition をインストールします。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Service Pack が適用されていないSQL Server 2016のバージョンをインストールした場合は、Service Packをインストールしてください。ビルドバージョンが 13.0.4001.0 の場合は、SP1が適用されています。詳細なバージョン情報は <a class="reference external" href="https://support.microsoft.com/ja/help/3177312">こちら</a> を参照。</p>
+</div>
+<p>インストーラーを起動します。　SQL Server インストールセンター が起動したら、 左側になる <strong>インストール</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-sql01.png" src="../_images/pre-sql01.png" />
+</div>
+<p>表示された画面で、 <strong>SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加</strong> を選択します。</p>
+<div class="figure">
+<img alt="../_images/pre-sql02.png" src="../_images/pre-sql02.png" />
+</div>
+<p>プロダクトキー画面で必要に応じて、 プロダクトキーを入力します。 <strong>次へ</strong> をクリックします。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Developer Edition の場合は、入力する必要はありません。</p>
+</div>
+<div class="figure">
+<img alt="../_images/pre-sql03.png" src="../_images/pre-sql03.png" />
+</div>
+<p>ライセンス条項画面が表示されたら、 <strong>ライセンスに同意します。</strong>  を選択して、 <strong>次へ</strong> をクリック。</p>
+<p>Microsoft Update 画面が表示されたら、 <strong>Microsoft Update を使用して更新プログラムを確認する。</strong> を必要に応じてチェックして、 <strong>次へ</strong> をクリック。</p>
+<p>インストール ルール画面が表示されます。エラー(失敗)がないことを確認して、 <strong>次へ</strong> をクリックします。もし、チェック項目でエラー(失敗)がある場合は、内容を確認して、問題を解決してください。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Windows ファイアウォール ルールは、スタンドアロン環境にインストールする場合は、無視できます。</p>
+</div>
+<div class="figure">
+<img alt="../_images/pre-sql05.png" src="../_images/pre-sql05.png" />
+</div>
+<p>機能の選択 画面が表示されたら、 データベースエンジンサービス を選択して、 <strong>次へ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-sql04.png" src="../_images/pre-sql04.png" />
+</div>
+<p>インスタンスの構成 画面でデフォルトのまま、 <strong>次へ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-sql06.png" src="../_images/pre-sql06.png" />
+</div>
+<p>サーバーの構成 が表示されたら、デフォルトのまま <strong>次へ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-sql07.png" src="../_images/pre-sql07.png" />
+</div>
+<p>データベースエンジンの構成 画面で、 サーバーの構成で次のように変更して**次へ** をクリックします。</p>
+<ul class="simple">
+<li>認証モードで混合モードを選択</li>
+<li>パスワードとパスワードの確認入力に saユーザーのパスワードを入力</li>
+<li>SQL Server 管理者の指定で、 <strong>現在のユーザーの追加</strong> ボタンをクリック</li>
+</ul>
+<div class="figure">
+<img alt="../_images/pre-sql08.png" src="../_images/pre-sql08.png" />
+</div>
+<p>インストールの準備完了 画面が表示されたら <strong>次へ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-sql09.png" src="../_images/pre-sql09.png" />
+</div>
+<p>完了画面が表示されたら、 <strong>閉じる</strong> ボタンをクリックします。インストールセンターを閉じて、再起動します。</p>
+</div>
+<div class="section" id="sql-server-management-studio">
+<h2>SQL Server Management Studio のインストール<a class="headerlink" href="#sql-server-management-studio" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>続いて、SQL Server Management Studio をインストールします。今回は本ドキュメント作成時の最新のバージョン(17.3)をインストールすることにします。</p>
+<p><a class="reference external" href="https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms">こちら</a> にアクセスして、ページ内のダウンロードリンクをクリックします。ダウンロードされる最新バージョンは、図のバージョンと異なる場合があります。</p>
+<div class="figure">
+<img alt="../_images/pre-ssms01.png" src="../_images/pre-ssms01.png" />
+</div>
+<p>同ページ内の <a class="reference external" href="https://docs.microsoft.com/ja-jp/sql/ssms/sql-server-management-studio-changelog-ssms#previous-ssms-releases">以前リリース</a> をクリックすると、過去バージョンをダウンロードできるページに移動できるので、そちらからだSQL Server 2016に対応した Management Studio のインストーラーをダウンロードできます。</p>
+<img alt="../_images/pre-ssms02.png" src="../_images/pre-ssms02.png" />
+<p>ダウンロードした SSMS-Setup-JPN.exe を <strong>右クリック &gt; プロパティ</strong> を選択して、プロパティ画面にアクセスします。<code class="docutils literal"><span class="pre">ブロックの解除</span></code> を選択して、 <strong>適用</strong> をクリックします。</p>
+<p>SSMS-Setup-JPN.exe をダブルクリックしてウィザードを起動します。 <strong>インストール</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-ssms03.png" src="../_images/pre-ssms03.png" />
+</div>
+<p>インストールが始まるので、しばらく待ちます。インストールが完了したら、 <strong>閉じる</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-ssms04.png" src="../_images/pre-ssms04.png" />
+</div>
+</div>
+<div class="section" id="id1">
+<h2>SQL Server の構成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>包含データベースを有効化します。Microsoft SQL Server Management Studio を起動します。
+<code class="docutils literal"><span class="pre">Win</span></code> キーをタイプして、スタートメニューから、起動できます。</p>
+<div class="figure">
+<img alt="../_images/pre-ssms05.png" src="../_images/pre-ssms05.png" />
+</div>
+<p>サーバーへの接続ダイアログで、 <strong>接続</strong> ボタンをクリックします。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">SQL Serverのインストール時にセットアップユーザーを管理者に追加している場合は、そのままログインできるはずです。</p>
+</div>
+<p>ツールバーから <strong>新しいクエリ</strong> を選択します。</p>
+<div class="figure">
+<img alt="../_images/pre-ssms06.png" src="../_images/pre-ssms06.png" />
+</div>
+<p>次のコードを入力して、 <code class="docutils literal"><span class="pre">F5</span></code> キーをタイプするか、 ツールバーの実行ボタンをクリックします。</p>
+<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="n">sp_configure</span> <span class="s1">&#39;contained database authentication&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">GO</span>
+<span class="n">RECONFIGURE</span><span class="p">;</span>
+<span class="k">GO</span>
+</pre></div>
+</div>
+<p>以上で包含データベースの有効化が完了です。</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="solr.html" class="btn btn-neutral float-right" title="Solrのセットアップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="iis.html" class="btn btn-neutral" title="IISのセットアップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, samatsu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

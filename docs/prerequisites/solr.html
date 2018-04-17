@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Solrのセットアップ &mdash; クイックセットアップガイド 1.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="検索" href="../search.html"/>
+    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
+        <link rel="up" title="必要なソフトウェア のインストール" href="index.html"/>
+        <link rel="next" title="SIFに必要なソフトウェアのインストール" href="prep-sif.html"/>
+        <link rel="prev" title="SQL Serverのセットアップ" href="sql-server.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> クイックセットアップガイド
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Sitecore Experience Platform 9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">コンテンツ:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">必要なソフトウェア のインストール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="iis.html">IISのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql-server.html">SQL Serverのセットアップ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Solrのセットアップ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#java">Javaのインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Solrのインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Solrの構成</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prep-sif.html">SIFに必要なソフトウェアのインストール</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Sitecore のインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">補足情報</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">クイックセットアップガイド</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">必要なソフトウェア のインストール</a> &raquo;</li>
+        
+      <li>Solrのセットアップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="solr">
+<h1>Solrのセットアップ<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SitecoreのアイテムおよびxDBのデータを検索するための検索エンジンとして利用するSolrをセットアップします。</p>
+<div class="section" id="java">
+<h2>Javaのインストール<a class="headerlink" href="#java" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Solr 6.6.1 が動作するには Java 8 以降がインストールされている必要があります。Java 1.8の実行環境をインストールします。</p>
+<p><a class="reference external" href="http://www.oracle.com/technetwork/jp/java/javase/downloads/jre8-downloads-2133155.html">こちらから</a>  Java 1.8の最新のバージョンをダウンロードします。今回は、ページ内の 8u152のセクションで、 <strong>Accept License Agreement</strong> を選択して、 Windows x64用のオフラインインストーラー(<code class="docutils literal"><span class="pre">jre-8u152-windows-x64.exe</span></code> )をダウンロードした前提で説明を記載します。</p>
+<p>ダウンロードしたファイルを <strong>右クリック &gt; プロパティ</strong> をクリックます。プロパティ画面で、<strong>ブロックの解除</strong> を選択して、<strong>適用ボタン</strong> をクリックします。</p>
+<p><code class="docutils literal"><span class="pre">jre-8u152-windows-x64.exe</span></code> をダブルクリックします。ウィザードが起動したら、<strong>インストール</strong> ボタンをクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-solr01.png" src="../_images/pre-solr01.png" />
+</div>
+<p>インストールが終わったら、 <strong>閉じる</strong> ボタンをクリックしてインストールを完了します。</p>
+<div class="figure">
+<img alt="../_images/pre-solr02.png" src="../_images/pre-solr02.png" />
+</div>
+<p>コマンドプロンプトを起動して、<code class="docutils literal"><span class="pre">java</span> <span class="pre">-version</span></code> コマンドを実行していjストールされたバージョンを確認します。</p>
+<div class="highlight-bat"><div class="highlight"><pre><span></span>C<span class="p">:</span><span class="nl">\</span><span class="c1">&gt;java -version</span>
+java version <span class="s2">&quot;1.8.0_152&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">以降の Solr のインストールや動作確認がうまくいかない場合は JAVA_HOMEという名前で環境変数を定義して、Javaがインストールされたパスを指定してください。</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Solrのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>続いて、Solrをインストールします。といってもzipファイルをダウンロードして展開するだけです。</p>
+<p><a class="reference external" href="https://archive.apache.org/dist/lucene/solr/6.6.1/">ここ</a> から、 <code class="docutils literal"><span class="pre">solr-6.6.1.zip</span></code> をダウンロードします。</p>
+<p>ダウンロードしたファイルを <strong>右クリック &gt; プロパティ</strong> で、 <strong>ブロックの解除</strong> を選択して、<strong>適用ボタン</strong> をクリックします。</p>
+<p>zipファイルを展開し、適当な場所に配置します。今回は、 <code class="docutils literal"><span class="pre">C:\</span></code> 直下に、展開した <code class="docutils literal"><span class="pre">solr-6.6.1</span></code> フォルダーを配置した前提で、説明を記載しまsう。</p>
+<div class="figure">
+<img alt="../_images/pre-solr03.png" src="../_images/pre-solr03.png" />
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Solrの構成<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SitecoreおよびxConnectとSolr間でSSLを使用した通信を行えるように、Solrの構成を変更します。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">SolrでSSL通信を行う環境のセットアップ方法については <a class="reference external" href="https://lucene.apache.org/solr/guide/6_6/enabling-ssl.html">enabling ssl</a> も参照してください。</p>
+</div>
+<p>Solrで使う自己証明書を作成していきます。java に付属する <code class="docutils literal"><span class="pre">keytool.exe</span></code> を使って証明書を作成します。コマンドプロンプトで、keytool.exe をファイル名だけで実行できるようにPATHを通します。</p>
+<div class="highlight-bat"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span>C:\Program Files\Java\jre1.8.0_152\bin;<span class="nv">%PATH%</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">binフォルダーまでのパスはインストールしたバージョンによって異なります。</p>
+</div>
+<p>次に、Solrで使用する jks ファイルを作成します。</p>
+<div class="highlight-bat"><div class="highlight"><pre><span></span>keytool -genkeypair -alias solr-ssl -keyalg RSA -keysize 2048 -keypass secret -storepass secret -validity 9999 -keystore solr-ssl.keystore.jks -ext SAN=DNS:localhost,IP:127.0.0.1 -dname <span class="s2">&quot;CN=localhost&quot;</span>
+</pre></div>
+</div>
+<p>keypass および storepass オプションで、今回は <code class="docutils literal"><span class="pre">secret</span></code> というパスワードを指定しています。このパスワードは以降のコマンドやウィザードで使用します。</p>
+<p>jksファイルから、p12 ファイルを作成します。</p>
+<div class="highlight-bat"><div class="highlight"><pre><span></span>keytool -importkeystore -srckeystore solr-ssl.keystore.jks -destkeystore solr-ssl.keystore.p12 -srcstoretype jks -deststoretype pkcs12
+</pre></div>
+</div>
+<p>このとき、コマンドプロンプトで次のパスワードを入力するようにプロンプトが表示されますが、<code class="docutils literal"><span class="pre">secret</span></code> を入力します。</p>
+<ul class="simple">
+<li>出力先キーストアのパスワードを入力してください:</li>
+<li>新規パスワードを再入力してください:</li>
+<li>ソース・キーストアのパスワードを入力してください:</li>
+</ul>
+<p>次の図がコマンドの実行例です。</p>
+<div class="figure">
+<img alt="../_images/pre-solr04.png" src="../_images/pre-solr04.png" />
+</div>
+<p><code class="docutils literal"><span class="pre">solr-ssl.keystore.jks</span></code> および、 <code class="docutils literal"><span class="pre">solr-ssl.keystore.p12</span></code> ファイルが作成されていることを確認します。</p>
+<div class="figure">
+<img alt="../_images/pre-solr05.png" src="../_images/pre-solr05.png" />
+</div>
+<p>作成した証明書は、Sitecoreおよび、xConnectが動作するサーバーにインストールします。今回は、スタンドアロン環境なので、Solrをセットアップしたマシンにインストールします。</p>
+<p>p12ファイルを右クリックし、 <strong>PFXのインストール</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-solr06.png" src="../_images/pre-solr06.png" />
+</div>
+<p>証明書のインポート ウィザード が開始されるので、 保存場所に <strong>ローカル コンピューター</strong> を選択して、 <strong>次へ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-solr07.png" src="../_images/pre-solr07.png" />
+</div>
+<p>インポートファイルが適切に選択されていることを確認したら <strong>次へ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-solr08.png" src="../_images/pre-solr08.png" />
+</div>
+<p>秘密キーの保護画面が表示されたら、 パスワードを入力します。 今回は <code class="docutils literal"><span class="pre">secret</span></code> です。</p>
+<div class="figure">
+<img alt="../_images/pre-solr09.png" src="../_images/pre-solr09.png" />
+</div>
+<p>証明書ストアを選択する画面で、 <strong>証明書をすべて次のストアに配置する</strong> を選択。<strong>参照</strong> ボタンをクリックして <strong>信頼されたルート証明機関</strong> を選択して、 <strong>OK</strong> をクリックし、
+選択ダイアログを閉じます。 <strong>次へ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-solr10.png" src="../_images/pre-solr10.png" />
+</div>
+<p>証明書インポートウィザードの完了 画面が表示されたら、 <strong>完了</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/pre-solr11.png" src="../_images/pre-solr11.png" />
+</div>
+<p>solrでjks ファイルを使用するので作成した jks ファイルをコピーしておきます。</p>
+<div class="highlight-bat"><div class="highlight"><pre><span></span><span class="k">copy</span> solr-ssl.keystore.jks C:\solr-6.6.1\server\etc
+</pre></div>
+</div>
+<p>Solrで、jksファイルを使用するように設定ファイルを変更します。<code class="docutils literal"><span class="pre">C:\solr-6.6.1\bin\solr.in.cmd</span></code>  をメモ帳で開きます。</p>
+<p>デフォルトで次のように設定されている場所を見つけ、コメントを解除します。</p>
+<div class="highlight-bat"><div class="highlight"><pre><span></span><span class="c1">REM set SOLR_SSL_KEY_STORE=etc/solr-ssl.keystore.jks</span>
+<span class="c1">REM set SOLR_SSL_KEY_STORE_PASSWORD=secret</span>
+<span class="c1">REM set SOLR_SSL_KEY_STORE_TYPE=JKS</span>
+<span class="c1">REM set SOLR_SSL_TRUST_STORE=etc/solr-ssl.keystore.jks</span>
+<span class="c1">REM set SOLR_SSL_TRUST_STORE_PASSWORD=secret</span>
+<span class="c1">REM set SOLR_SSL_TRUST_STORE_TYPE=JKS</span>
+<span class="c1">REM set SOLR_SSL_NEED_CLIENT_AUTH=false</span>
+<span class="c1">REM set SOLR_SSL_WANT_CLIENT_AUTH=false</span>
+</pre></div>
+</div>
+<p>変更後次のようにになります。ファイル名やjksファイルを配置している場所やパスワードは環境に応じて適宜変更してください。</p>
+<div class="highlight-bat"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">SOLR_SSL_KEY_STORE</span><span class="p">=</span>etc/solr-ssl.keystore.jks
+<span class="k">set</span> <span class="nv">SOLR_SSL_KEY_STORE_PASSWORD</span><span class="p">=</span>secret
+<span class="k">set</span> <span class="nv">SOLR_SSL_KEY_STORE_TYPE</span><span class="p">=</span>JKS
+<span class="k">set</span> <span class="nv">SOLR_SSL_TRUST_STORE</span><span class="p">=</span>etc/solr-ssl.keystore.jks
+<span class="k">set</span> <span class="nv">SOLR_SSL_TRUST_STORE_PASSWORD</span><span class="p">=</span>secret
+<span class="k">set</span> <span class="nv">SOLR_SSL_TRUST_STORE_TYPE</span><span class="p">=</span>JKS
+<span class="k">set</span> <span class="nv">SOLR_SSL_NEED_CLIENT_AUTH</span><span class="p">=</span>false
+<span class="k">set</span> <span class="nv">SOLR_SSL_WANT_CLIENT_AUTH</span><span class="p">=</span>false
+</pre></div>
+</div>
+<p>これで準備完了です。コマンドプロンプトを起動して、 solr start と入力して起動することを確認します。下図は実行例です。</p>
+<div class="figure">
+<img alt="../_images/pre-solr12.png" src="../_images/pre-solr12.png" />
+</div>
+<p>ブラウザーを起動して、 <code class="docutils literal"><span class="pre">https://localhost:8983/solr</span></code> にアクセスして画面が表示されることを確認します。</p>
+<div class="figure">
+<img alt="../_images/pre-solr13.png" src="../_images/pre-solr13.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="prep-sif.html" class="btn btn-neutral float-right" title="SIFに必要なソフトウェアのインストール" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sql-server.html" class="btn btn-neutral" title="SQL Serverのセットアップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, samatsu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+robocopy .\_build\html .\docs /MIR /XD ".doctrees"

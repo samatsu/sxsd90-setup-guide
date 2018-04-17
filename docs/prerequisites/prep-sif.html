@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SIFに必要なソフトウェアのインストール &mdash; クイックセットアップガイド 1.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="検索" href="../search.html"/>
+    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
+        <link rel="up" title="必要なソフトウェア のインストール" href="index.html"/>
+        <link rel="next" title="Sitecore のインストール" href="../installation/index.html"/>
+        <link rel="prev" title="Solrのセットアップ" href="solr.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> クイックセットアップガイド
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Sitecore Experience Platform 9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">コンテンツ:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">必要なソフトウェア のインストール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="iis.html">IISのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql-server.html">SQL Serverのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solr.html">Solrのセットアップ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SIFに必要なソフトウェアのインストール</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#powershell">PowerShell のバージョン確認</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web-deploy-3-6-for-hosting-servers">Web Deploy 3.6 for Hosting Servers のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#url-rewrite-2-1">URL Rewrite 2.1のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dacfx">データ層アプリケーション フレームワーク (17.01 DacFx)のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sql-dom">SQL DOM のインストール</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Sitecore のインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">補足情報</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">クイックセットアップガイド</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">必要なソフトウェア のインストール</a> &raquo;</li>
+        
+      <li>SIFに必要なソフトウェアのインストール</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sif">
+<h1>SIFに必要なソフトウェアのインストール<a class="headerlink" href="#sif" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore Install Framework を使用するために必要なソフトウェアをインストールします。</p>
+<div class="section" id="powershell">
+<h2>PowerShell のバージョン確認<a class="headerlink" href="#powershell" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>PowerShell は5.0 以降のバージョンが必要です。 Windows Server 2016の場合特に問題ないと思いますが、念のため確認します。</p>
+<p>PowerShellを起動して、<code class="docutils literal"><span class="pre">$PSVersionTable</span></code> と入力して実行します。</p>
+<div class="figure">
+<img alt="../_images/pre-sif01.png" src="../_images/pre-sif01.png" />
+</div>
+</div>
+<div class="section" id="web-deploy-3-6-for-hosting-servers">
+<h2>Web Deploy 3.6 for Hosting Servers のインストール<a class="headerlink" href="#web-deploy-3-6-for-hosting-servers" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Web PI(Platform Installer) 5.0 を使ってインストールします。</p>
+<p><a class="reference external" href="https://www.microsoft.com/web/downloads/platform.aspx">Microsoft Web Platform Installer</a> のページから、インストーラーをダウンロードします。ドキュメント作成時点の最新版が Web PI 5.0 です。
+ダウンロードしたファイル wpilauncher.exe を右クリック &gt; プロパティ を選択します。 <strong>ブロックの解除</strong> をクリックして、<strong>適用</strong> ボタンを押します。</p>
+<p>wpilauncher.exe をダブルクリックして、インストーラーを起動します。右上の検索ボックスから、 <em>Web Deploy</em> というキーワードを入力して検索します。一覧から、 でWeb Deploy 3.6 for Hosting Servers を見つけて、右横にある <strong>追加ボタン</strong> をクリックして選択した後、 <strong>インストール</strong> をクリックしてインストールします。</p>
+<div class="figure">
+<img alt="../_images/pre-sif02.png" src="../_images/pre-sif02.png" />
+</div>
+</div>
+<div class="section" id="url-rewrite-2-1">
+<h2>URL Rewrite 2.1のインストール<a class="headerlink" href="#url-rewrite-2-1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Web PI で、 URL Rewrite を検索すれば 2.1 のバージョンのURL Rewrite モジュールを見つけて、Web Deploy 3.6 for Hosting Servers と同様にインストールできます。</p>
+<p>日本語UIのOSで検索すると、 URL Rewrite 2.0 が見つかりますが、こちらで問題ありません。インストール後に、 <code class="docutils literal"><span class="pre">C:\Windows\System32\inetsrv\rewrite.dll</span></code> のバージョンを確認すると 7.1.1980 になっているので、バージョン 2.1であることを確認できます。</p>
+<div class="figure">
+<img alt="../_images/pre-sif04.png" src="../_images/pre-sif04.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">次のURLから x64用の日本語のURL Rewrite 2.1 を明示的にダウンロードしてインストールすることもできます。<a class="reference external" href="https://www.iis.net/downloads/microsoft/url-rewrite">https://www.iis.net/downloads/microsoft/url-rewrite</a></p>
+</div>
+</div>
+<div class="section" id="dacfx">
+<h2>データ層アプリケーション フレームワーク (17.01 DacFx)のインストール<a class="headerlink" href="#dacfx" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://www.microsoft.com/ja-jp/download/details.aspx?id=55114">このページ</a>  からx86版のMicrosoft® SQL Server® データ層アプリケーション フレームワーク (17.0.1 DacFx)を明示的にダウンロードしてインストールするできます。</p>
+<p>ただし、 <a class="reference internal" href="sql-server.html"><span class="doc">SQL Serverのセットアップ</span></a> のページで、最新の SQL Server Management Studio をインストールしている場合は、すでに最新のソフトウェアがインストールされているというメッセージが表示されます。この場合は、インストールする必要はありません。</p>
+</div>
+<div class="section" id="sql-dom">
+<h2>SQL DOM のインストール<a class="headerlink" href="#sql-dom" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://www.microsoft.com/ja-JP/download/details.aspx?id=54279">Microsoft® SQL Server® 2016 Service Pack 1 Feature Pack</a> のページにアクセスして、 x86版の SqlDom.msi をダウンロードして インストールします。</p>
+<div class="figure">
+<img alt="../_images/pre-sif03.png" src="../_images/pre-sif03.png" />
+</div>
+<p>これで必要なソフトウェアのインストールは完了です。</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installation/index.html" class="btn btn-neutral float-right" title="Sitecore のインストール" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="solr.html" class="btn btn-neutral" title="Solrのセットアップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, samatsu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

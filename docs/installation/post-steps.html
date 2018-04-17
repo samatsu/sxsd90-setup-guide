@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>インストール後の処理 &mdash; クイックセットアップガイド 1.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="検索" href="../search.html"/>
+    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
+        <link rel="up" title="Sitecore のインストール" href="index.html"/>
+        <link rel="next" title="補足情報" href="../misc/index.html"/>
+        <link rel="prev" title="Sitecoreのセットアップ" href="sitecore.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> クイックセットアップガイド
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Sitecore Experience Platform 9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">コンテンツ:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../prerequisites/index.html">必要なソフトウェア のインストール</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore のインストール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sif.html">SIFのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sitecore.html">Sitecoreのセットアップ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">インストール後の処理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#xdb">xDBシャードデータベース用のデータベースユーザーの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">インデックスのリビルド</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">リンクデータベースのリビルド</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">マーケティング定義の配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expires">静的コンテンツに対する Expires ヘッダーの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ip">IPジオロケーションルックアップ処理の無効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iis">IISの再起動</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">補足情報</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">クイックセットアップガイド</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Sitecore のインストール</a> &raquo;</li>
+        
+      <li>インストール後の処理</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>インストール後の処理<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecoreをインストールしたら、 Installation Guide の内容に従って、インストレーションの後処理を実施します。Sitecore 9.0 Initial Release用の Installation Guideの6章の手順に従って、後処理を実施していきます。バージョンによって作業が異なる可能性があるので、利用するSitecoreのバージョンのInstalltion GuideのSitecore XP Post-Installation Stepsを参照するようにしてください。</p>
+<div class="section" id="xdb">
+<h2>xDBシャードデータベース用のデータベースユーザーの作成<a class="headerlink" href="#xdb" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>シャード構成されたコレクションデータベースにアクセスするSQLユーザー(デフォルトでcollectionuser)をSQLサーバー上に作成します。</p>
+<p>SQL Server Management Studio を起動して、SQL データベースサーバーに接続します。</p>
+<p>ツールバーの <strong>新しいクエリ</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post01.png" src="../_images/ins-post01.png" />
+</div>
+<p>Installation Guideの <cite>Add a Recognized User to the xDB Shard Databases</cite> セクションのサンプルスクリプトをベースにして、 <cite>SETVAR</cite> のパラメーターを適宜変更します。
+デフォルト構成で xConnect をセットアップしている場合は、サンプルスクリプトのまま実行できるはずです。Sitecore 9.0 Initail Release が対象で、デフォルト構成のままインストールし、インストレーションガイドのPDFからサンプルスクリプトを準備するのが面倒な場合は、 <a class="reference download internal" href="../_downloads/postinstall.sql" download=""><code class="xref download docutils literal"><span class="pre">こちら</span></code></a> からsqlファイルをダウンロードできます。</p>
+<p>Management Studioの <strong>クエリ &gt; SQL CMDモード</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post02.png" src="../_images/ins-post02.png" />
+</div>
+<p><code class="docutils literal"><span class="pre">F5</span></code> キーもしくは、ツールバーの <strong>実行ボタン</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post03.png" src="../_images/ins-post03.png" />
+</div>
+<p>エラーが発生しなければ成功です。</p>
+</div>
+<div class="section" id="id2">
+<h2>インデックスのリビルド<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecoreの編集環境にログインします。デフォルトのままインストールしている場合は、<code class="docutils literal"><span class="pre">http://xp0.sc/sitecore</span></code> です。</p>
+<p><strong>コントロールパネル</strong> にアクセスし、 <strong>INDEXING</strong> セクションの <strong>Indexing manager</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post04.png" src="../_images/ins-post04.png" />
+</div>
+<p>Indexing Manager ダイアログで、 Select all をクリックして、 <strong>Rebuild</strong> をクリックします。</p>
+</div>
+<div class="section" id="id3">
+<h2>リンクデータベースのリビルド<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アイテム間の参照関係を管理しているリンクデータベースをリビルドします。コントロールパネル内の <strong>DATABASE</strong> セクションの <strong>Rebuild link databases</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post05.png" src="../_images/ins-post05.png" />
+</div>
+<p>core, master を選択して、<strong>Rebuild</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post06.png" src="../_images/ins-post06.png" />
+</div>
+</div>
+<div class="section" id="id4">
+<h2>マーケティング定義の配置<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>xDBにマーケティング定義を配置します。コントロールパネル内の <strong>ANALYTICS</strong> セクションの <strong>Deploy marketing definitions</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post07.png" src="../_images/ins-post07.png" />
+</div>
+<p>定義の種類がすべて選択されていることを確認してから、 <strong>Deploy</strong> をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post08.png" src="../_images/ins-post08.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Deployの処理は時間がかかります。</p>
+</div>
+</div>
+<div class="section" id="expires">
+<h2>静的コンテンツに対する Expires ヘッダーの設定<a class="headerlink" href="#expires" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>パフォーマンスを改善するために、静的コンテンツに対して7日間キャッシュを有効かする設定をIISのサイトに設定します。</p>
+<p>IIS管理マネージャーを起動して、 Sitecoreのサイト(今回の例は xp0.sc) を選択して、 <strong>HTTP 応答ヘッダー</strong> をダブルクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post09.png" src="../_images/ins-post09.png" />
+</div>
+<p>右側操作ペインの <strong>共通ヘッダー</strong> の設定 をクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post10.png" src="../_images/ins-post10.png" />
+</div>
+<p>ダイアログの中の <strong>期限切れのWebコンテンツ</strong> を選択し、 失効までの期間に 7日間を指定して <strong>OK</strong> ボタンをクリックします。</p>
+<div class="figure">
+<img alt="../_images/ins-post11.png" src="../_images/ins-post11.png" />
+</div>
+</div>
+<div class="section" id="ip">
+<h2>IPジオロケーションルックアップ処理の無効化<a class="headerlink" href="#ip" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>IPアドレスから、ロケーション情報をルックアップするサービスを利用していない場合は、ルックアップ処理を無効化できます。 Installation Guideの Tracking Configuration セクションに従って、無効化してください。有効のままでも特に問題はありません。</p>
+</div>
+<div class="section" id="iis">
+<h2>IISの再起動<a class="headerlink" href="#iis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最後に、コマンドプロンプトから <code class="docutils literal"><span class="pre">iisreset</span></code> を実行してIISを再起動します。</p>
+<p>これでセットアップ完了です。</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../misc/index.html" class="btn btn-neutral float-right" title="補足情報" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sitecore.html" class="btn btn-neutral" title="Sitecoreのセットアップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, samatsu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

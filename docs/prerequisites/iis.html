@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IISのセットアップ &mdash; クイックセットアップガイド 1.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="検索" href="../search.html"/>
+    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
+        <link rel="up" title="必要なソフトウェア のインストール" href="index.html"/>
+        <link rel="next" title="SQL Serverのセットアップ" href="sql-server.html"/>
+        <link rel="prev" title="必要なソフトウェア のインストール" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> クイックセットアップガイド
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Sitecore Experience Platform 9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">コンテンツ:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">必要なソフトウェア のインストール</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">IISのセットアップ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">IISのインストール</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sql-server.html">SQL Serverのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solr.html">Solrのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prep-sif.html">SIFに必要なソフトウェアのインストール</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Sitecore のインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">補足情報</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">クイックセットアップガイド</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">必要なソフトウェア のインストール</a> &raquo;</li>
+        
+      <li>IISのセットアップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iis">
+<h1>IISのセットアップ<a class="headerlink" href="#iis" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>IISをインストールします。SitecoreはIIS上のWebサイトとして動作します。また、Experience Platform 環境で必要な、xConnect も IIS 上の独立したSitecore本体とは別のサイトとして動作します。</p>
+<div class="section" id="id1">
+<h2>IISのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サーバーマネージャーを起動して、<strong>役割と機能の追加</strong> を選択します。</p>
+<div class="figure">
+<img alt="../_images/pre-iis01.png" src="../_images/pre-iis01.png" />
+</div>
+<p>ウィサードが起動するので、 <strong>次へ</strong>  をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis02.png" src="../_images/pre-iis02.png" />
+</div>
+<p>インストールの種類の選択 画面が表示されます。 <strong>役割ベースまたは機能ベースのインストール</strong>  を選択して、 <strong>次へ</strong> をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis03.png" src="../_images/pre-iis03.png" />
+</div>
+<p>対象サーバーの選択画面では、ローカルサーバーが選択されていることを確認して、 <strong>次へ</strong>  をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis04.png" src="../_images/pre-iis04.png" />
+</div>
+<p>サーバーの役割の選択画面で、 <strong>Web サーバー(IIS)</strong> を選択します。</p>
+<div class="figure">
+<img alt="../_images/pre-iis05.png" src="../_images/pre-iis05.png" />
+</div>
+<p>この時、次のダイアログが表示されたら、 <strong>機能の追加</strong> をクリックします。元の画面に戻ってきたら <strong>次へ</strong> をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis06.png" src="../_images/pre-iis06.png" />
+</div>
+<p>機能の選択画面で、デフォルトのまま、 <strong>次へ</strong>  をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis07.png" src="../_images/pre-iis07.png" />
+</div>
+<p>Web サーバーの役割(IIS) 画面で、　<strong>次へ</strong>  をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis08.png" src="../_images/pre-iis08.png" />
+</div>
+<p>役割サービスの選択画面で、 <strong>アプリケーション開発 &gt; ASP.NET 4.6</strong> をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis09.png" src="../_images/pre-iis09.png" />
+</div>
+<p>この時、関連する必要な機能の追加確認ダイアログが表示されたら、<strong>機能の追加</strong> をクリックします。元の画面に戻ってきたら <strong>次へ</strong> をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis10.png" src="../_images/pre-iis10.png" />
+</div>
+<p>確認画面で、選択したオプションの内容を確認したら、<strong>次へ</strong> をクリック。</p>
+<div class="figure">
+<img alt="../_images/pre-iis11.png" src="../_images/pre-iis11.png" />
+</div>
+<p>しばらくするとインストールが完了します。</p>
+<p>完了したら、再起動します。</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sql-server.html" class="btn btn-neutral float-right" title="SQL Serverのセットアップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="必要なソフトウェア のインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, samatsu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
