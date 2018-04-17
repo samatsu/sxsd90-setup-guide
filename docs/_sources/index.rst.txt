@@ -5,14 +5,14 @@
 
 Sitecore 9.0 クイックセットアップガイド
 ======================================================================
-このドキュメントでは、Sitecore ９ の評価および開発用に、単一サーバーのスタンドアロン環境で動作するのSitecore XP 9の環境を構築する手順を記載します。
+このドキュメントでは、Sitecore Experience Solutions Developer for v9.0 および Sitecore 9 Developer Foundations を受講する受講生が、演習用に単一サーバー上で動作する Sitecore 9.0環境 をローカルのPC上にを構築する手順を記載します。
 インストールに利用したソフトウェアのバージョンは次の通りです。
 
   :OS: Windows Server 2016 Standard
   :Detabase:    SQL Server 2016 SP1 Developer Edition 
   :Sitecore:    9.0 Initial Release
 
-.. warning:: スタンドアロン(XP0)環境を構築する場合は、 Windows Server 2016以降かWindows 10をご利用ください。
+.. warning:: 単一サーバーで動作するスタンドアロン(XP0)環境を構築する場合は、 Windows Server 2016以降かWindows 10をご利用ください。
 
 .. toctree::
    :maxdepth: 2
