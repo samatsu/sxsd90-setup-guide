@@ -21,19 +21,12 @@ Sitecoreの編集環境にログインしてコントロールパネルの **LOC
 * 編集するコンテンツの言語
 * デフォルトのライブサイトの言語
 
-Sitecore がインストールされたフォルダーの ``App_Config\Sitecore\CMS.Core`` をエクスプローラーで開きます。 例えば、 C:\inetpub\wwwroot\xp0.sc\App_Config\Sitecore\CMS.Core となります。
-フォルダーの、Sitecore.DefaultLanguage.config をコピーします。
-
+Sitecore がインストールされたフォルダーの ``App_Config\Include\Examples`` をエクスプローラーで開きます。 例えば、 ``C:\inetpub\wwwroot\tac.corporate\App_Config\Include\Examples`` となります。
+フォルダーの、``ja-JP.config.example`` を ``ja-JP.config`` にリネームします。
 
 .. figure:: /images/misc/misc-japanese-ui02.png
 
-コピーしたファイルを ``App_Config\Include`` フォルダーに貼り付けす。
-
-.. figure:: /images/misc/misc-japanese-ui03.png
-
-ファイルを開き、 ``en`` が設定されている箇所を ``ja-jp`` に変更します(4箇所あります)。
-
-.. note:: マルチサイトを実装する場合は、既存の設定を参考にして、追加したサイトのデフォルトの言語を変更してください。
+ファイルを開くと、shell のサイト(コンテンツエディターなどの編集環境でのデフォルトの編集言語)やライブサイト(website)のデフォルトの言語バージョン、ClientLanguage(編集ツール自身のデフォルトの言語)が ja-jp となるようにパッチが構成されていることがわかります。
 
 これで、ライブサイトや、編集環境のUIおよび編集用のコンテンツの言語がデフォルトで日本語になります。
 

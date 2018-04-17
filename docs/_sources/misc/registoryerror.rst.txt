@@ -13,7 +13,7 @@ SitecoreのWebサイトが既定の ApplicationPoolIdentity ユーザーで実�
 
 .. figure:: /images/misc/misc-regerr01.png
 
-もしくは、アプリケーションプールの実行ユーザーを ``Performance Log Users`` グループのメンバーにします。 デフォルトのApplicationPoolIdentity が実行ユーザーに指定されている場合は、実際にApplicationPoolIdentityというユーザーがいるわけではありません。例えば xp0.sc というサイトのApplicationPoolIdentityの実際のアカウントは、次の図のように ``IIS AppPool\xp0.sc`` になります。
+もしくは、アプリケーションプールの実行ユーザーを ``Performance Log Users`` グループのメンバーにします。 デフォルトのApplicationPoolIdentity が実行ユーザーに指定されている場合は、実際にApplicationPoolIdentityというユーザーがいるわけではありません。例えば tac.corporate というサイトのApplicationPoolIdentityの実際のアカウントは、次の図のように ``IIS AppPool\tac.corporate`` になります。
 
 .. figure:: /images/misc/misc-regerr02.png
 

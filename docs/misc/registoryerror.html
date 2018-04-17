@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="検索" href="../search.html"/>
-    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
-        <link rel="up" title="補足情報" href="index.html"/>
-        <link rel="next" title="日本語化の設定" href="japaneseui.html"/>
-        <link rel="prev" title="補足情報" href="index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="日本語化の設定" href="japaneseui.html" />
+    <link rel="prev" title="補足情報" href="index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -98,6 +90,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">補足情報</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">レジストリ キー へのアクセスが拒否されました。エラーの回避</a></li>
 <li class="toctree-l2"><a class="reference internal" href="japaneseui.html">日本語化の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video.html">インストール手順の動画</a></li>
 </ul>
 </li>
 </ul>
@@ -111,7 +104,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">クイックセットアップガイド</a>
@@ -119,9 +112,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -166,15 +160,15 @@
   <div class="section" id="id1">
 <h1>レジストリ キー へのアクセスが拒否されました。エラーの回避<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>SitecoreのWebサイトが既定の ApplicationPoolIdentity ユーザーで実行されている場合、Sitecoreのログファイルに次のような警告メッセージが記録されます。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>レジストリ キー &#39;Global&#39; へのアクセスが拒否されました。
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>レジストリ キー &#39;Global&#39; へのアクセスが拒否されました。
 </pre></div>
 </div>
-<p>これはSitecore の パフォーマンスログを有効化している状態でかつ、アプリケーションプールの実行ユーザーが <code class="docutils literal"><span class="pre">Performance</span> <span class="pre">Log</span> <span class="pre">Users</span></code> グループのメンバーになっていない場合に発生します。</p>
+<p>これはSitecore の パフォーマンスログを有効化している状態でかつ、アプリケーションプールの実行ユーザーが <code class="docutils literal notranslate"><span class="pre">Performance</span> <span class="pre">Log</span> <span class="pre">Users</span></code> グループのメンバーになっていない場合に発生します。</p>
 <p>そのため、この問題を回避するには、 アプリケーションプールの実行ユーザーをデフォルトの ApplicationPoolIdentity から Network Service に変更します。</p>
 <div class="figure">
 <img alt="../_images/misc-regerr01.png" src="../_images/misc-regerr01.png" />
 </div>
-<p>もしくは、アプリケーションプールの実行ユーザーを <code class="docutils literal"><span class="pre">Performance</span> <span class="pre">Log</span> <span class="pre">Users</span></code> グループのメンバーにします。 デフォルトのApplicationPoolIdentity が実行ユーザーに指定されている場合は、実際にApplicationPoolIdentityというユーザーがいるわけではありません。例えば xp0.sc というサイトのApplicationPoolIdentityの実際のアカウントは、次の図のように <code class="docutils literal"><span class="pre">IIS</span> <span class="pre">AppPool\xp0.sc</span></code> になります。</p>
+<p>もしくは、アプリケーションプールの実行ユーザーを <code class="docutils literal notranslate"><span class="pre">Performance</span> <span class="pre">Log</span> <span class="pre">Users</span></code> グループのメンバーにします。 デフォルトのApplicationPoolIdentity が実行ユーザーに指定されている場合は、実際にApplicationPoolIdentityというユーザーがいるわけではありません。例えば tac.corporate というサイトのApplicationPoolIdentityの実際のアカウントは、次の図のように <code class="docutils literal notranslate"><span class="pre">IIS</span> <span class="pre">AppPool\tac.corporate</span></code> になります。</p>
 <div class="figure">
 <img alt="../_images/misc-regerr02.png" src="../_images/misc-regerr02.png" />
 </div>
@@ -182,9 +176,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -206,7 +198,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -225,6 +217,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0',
+            LANGUAGE:'ja',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -243,14 +236,13 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

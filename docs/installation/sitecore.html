@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="検索" href="../search.html"/>
-    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
-        <link rel="up" title="Sitecore のインストール" href="index.html"/>
-        <link rel="next" title="インストール後の処理" href="post-steps.html"/>
-        <link rel="prev" title="SIFのセットアップ" href="sif.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="インストール後の処理" href="post-steps.html" />
+    <link rel="prev" title="SIFのセットアップ" href="sif.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -118,7 +110,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">クイックセットアップガイド</a>
@@ -126,9 +118,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -175,7 +168,8 @@
 <p>Sitecore Experience Platform 環境をセットアップしていきます。</p>
 <div class="section" id="id1">
 <h2>リソースのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference external" href="https://dev.sitecore.net/">https://dev.sitecore.net/</a> にアクセスして、 最新の Sitecore 9 の構成ファイルをダウンロードします。今回は、Sitecore Experience Platform 9.0 rev. 171002 (9.0 Initial Release) をインストール前提で、手順を記載していきます。</p>
+<p>Sitecore Developer Foundationまはた、Sitecore エクスペリエンスソリューションデベロッパートレーニングを受講する受講生の場合は、トレーニング受講前もしくは、受講後に案内されるサイトから　Sitecore 9.0.0 rev. 171002 (WDP XP0 packages).zip　ファイルを取得します。</p>
+<p>最新のバージョンを使用したい場合は、<a class="reference external" href="https://dev.sitecore.net/">https://dev.sitecore.net/</a> にアクセスして、必要なバージョンをダウンロードします。 今回は Sitecore 9 の構成ファイルをダウンロードします。今回は、Sitecore Experience Platform 9.0 rev. 171002 (9.0 Initial Release) をインストール前提で、手順を記載していきます。</p>
 <p>Sitecore 9.0 の Initial Release は <a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Initial_Release.aspx">こちら</a> からダウンロードできます。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
@@ -190,7 +184,7 @@
 <p class="first admonition-title">注釈</p>
 <p class="last">Azure用の構成ファイル一式は <cite>Download options for Azure AppService</cite> セクションからダウンロードできます。</p>
 </div>
-<p>ダウンロードした zip ファイルを展開します。今回は、  <code class="docutils literal"><span class="pre">C:\resourcefiles</span></code> フォルダーにzipファイルを展開した前提で説明を記載します。</p>
+<p>ダウンロードした zip ファイルを展開します。今回は、  <code class="docutils literal notranslate"><span class="pre">C:\resourcefiles</span></code> フォルダーにzipファイルを展開した前提で説明を記載します。</p>
 <p><cite>C:resourcefiles</cite> に展開された <cite>XP0 Configuration files rev.171002.zip</cite> を展開して、中身のファイルを <cite>C:resourcefiles</cite> に移動します。最終的に次の図のようなファイル構成になります。</p>
 <div class="figure">
 <img alt="../_images/ins-sc03.png" src="../_images/ins-sc03.png" />
@@ -204,8 +198,8 @@
 <h2>Install スクリプトの準備<a class="headerlink" href="#install" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore のインストールは、 インストール用のPowerShell スクリプトを使用します。
 ダウンロードしたInstallation Guide の <cite>Edit and Run the Installation Script</cite> に従って、インストール用のPowerShell スクリプト
-を作成し、<code class="docutils literal"><span class="pre">C:\resourcefiles</span></code> に <code class="docutils literal"><span class="pre">install.ps1</span></code> という名前で保存します。</p>
-<p>Installation Guide の PDFからスクリプトをコピーして作成するのが面倒な場合は、 Sitecore 9.0 の Initial Release の場合は、 <a class="reference download internal" href="../_downloads/install.ps1" download=""><code class="xref download docutils literal"><span class="pre">Installスクリプトのひな形</span></code></a> をダウンロードして利用することもできます。</p>
+を作成し、<code class="docutils literal notranslate"><span class="pre">C:\resourcefiles</span></code> に <code class="docutils literal notranslate"><span class="pre">install.ps1</span></code> という名前で保存します。</p>
+<p>Installation Guide の PDFからスクリプトをコピーして作成するのが面倒な場合は、 Sitecore 9.0 の Initial Release の場合は、 <a class="reference download internal" href="../_downloads/install.ps1" download=""><code class="xref download docutils literal notranslate"><span class="pre">Installスクリプトのひな形</span></code></a> をダウンロードして利用することもできます。</p>
 <p>今回は、あらかじめ用意しておいたインストールスクリプトのひな形をダウンロードし、#define parameters セクションにパラメーターを次の表のように変更しました。</p>
 <table border="1" class="docutils" id="id4">
 <caption><span class="caption-text">インストールスクリプトのパラメーター例</span><a class="headerlink" href="#id4" title="このテーブルへのパーマリンク">¶</a></caption>
@@ -220,7 +214,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>$prefix</td>
-<td>&quot;xp0&quot;</td>
+<td>&quot;tac.corporate&quot;</td>
 </tr>
 <tr class="row-odd"><td>$PSScriptRoot</td>
 <td>&quot;C:resourcefiles&quot;</td>
@@ -229,16 +223,16 @@
 <td>&quot;$prefix.xconnect&quot;</td>
 </tr>
 <tr class="row-odd"><td>$sitecoreSiteName</td>
-<td>&quot;$prefix.sc&quot;</td>
+<td>&quot;$prefix&quot;</td>
 </tr>
 <tr class="row-even"><td>$SolrUrl</td>
 <td>&quot;https://localhost:8983/solr&quot;</td>
 </tr>
 <tr class="row-odd"><td>$SolrRoot</td>
-<td>&quot;C:Solr-6.6.1&quot;</td>
+<td>&quot;C:Solr-6.6.2&quot;</td>
 </tr>
 <tr class="row-even"><td>$SolrService</td>
-<td>&quot;Solr-6.6.1&quot;</td>
+<td>&quot;Solr-6.6.2&quot;</td>
 </tr>
 <tr class="row-odd"><td>$SqlServer</td>
 <td>&quot;.&quot;</td>
@@ -270,8 +264,8 @@
 </div>
 <div class="section" id="id3">
 <h2>Install スクリプトの実行<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PowerShellを管理者モードで起動して、作成した Install.ps1 を実行します。このとき、文字化けが発生する場合は、最初に <code class="docutils literal"><span class="pre">[Console]::OutputEncoding</span> <span class="pre">=</span> <span class="pre">[Text.Encoding]::UTF8</span></code> を実行します。</p>
-<div class="highlight-ps1"><div class="highlight"><pre><span></span><span class="no">[Console]</span><span class="p">::</span><span class="n">OutputEncoding</span> <span class="p">=</span> <span class="no">[Text.Encoding]</span><span class="p">::</span><span class="n">UTF8</span>
+<p>PowerShellを管理者モードで起動して、作成した Install.ps1 を実行します。このとき、文字化けが発生する場合は、最初に <code class="docutils literal notranslate"><span class="pre">[Console]::OutputEncoding</span> <span class="pre">=</span> <span class="pre">[Text.Encoding]::UTF8</span></code> を実行します。</p>
+<div class="highlight-ps1 notranslate"><div class="highlight"><pre><span></span><span class="no">[Console]</span><span class="p">::</span><span class="n">OutputEncoding</span> <span class="p">=</span> <span class="no">[Text.Encoding]</span><span class="p">::</span><span class="n">UTF8</span>
 <span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span>
 </pre></div>
 </div>
@@ -287,8 +281,8 @@
 <div class="figure">
 <img alt="../_images/ins-sc06.png" src="../_images/ins-sc06.png" />
 </div>
-<p>ブラウザーを起動して、 <cite>http://xp0.sc</cite> にアクセスします。デフォルトのトップページが表示されることを確認します。</p>
-<p>また、<cite>http://xp0.sc/sitecore</cite> にアクセスして、デフォルトの admin の パスワード <cite>admin/b</cite> でラウンチパッドにログインできることを確認します。</p>
+<p>ブラウザーを起動して、 <cite>http://tac.corporate</cite> にアクセスします。デフォルトのトップページが表示されることを確認します。</p>
+<p>また、<cite>http://tac.corporate/sitecore</cite> にアクセスして、デフォルトの admin の パスワード <cite>admin/b</cite> でラウンチパッドにログインできることを確認します。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
 <p class="last">インストール用の設定ファイルで別のパスワードを指定している場合は、そのパスワードでログインして下さい。</p>
@@ -298,9 +292,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -322,7 +314,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -341,6 +333,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0',
+            LANGUAGE:'ja',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -359,14 +352,13 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

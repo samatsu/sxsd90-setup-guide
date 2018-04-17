@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="検索" href="../search.html"/>
-    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
-        <link rel="up" title="必要なソフトウェア のインストール" href="index.html"/>
-        <link rel="next" title="Sitecore のインストール" href="../installation/index.html"/>
-        <link rel="prev" title="Solrのセットアップ" href="solr.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Sitecore のインストール" href="../installation/index.html" />
+    <link rel="prev" title="Solrのセットアップ" href="solr.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -120,7 +112,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">クイックセットアップガイド</a>
@@ -128,9 +120,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -178,7 +171,7 @@
 <div class="section" id="powershell">
 <h2>PowerShell のバージョン確認<a class="headerlink" href="#powershell" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>PowerShell は5.0 以降のバージョンが必要です。 Windows Server 2016の場合特に問題ないと思いますが、念のため確認します。</p>
-<p>PowerShellを起動して、<code class="docutils literal"><span class="pre">$PSVersionTable</span></code> と入力して実行します。</p>
+<p>PowerShellを起動して、<code class="docutils literal notranslate"><span class="pre">$PSVersionTable</span></code> と入力して実行します。</p>
 <div class="figure">
 <img alt="../_images/pre-sif01.png" src="../_images/pre-sif01.png" />
 </div>
@@ -196,7 +189,7 @@
 <div class="section" id="url-rewrite-2-1">
 <h2>URL Rewrite 2.1のインストール<a class="headerlink" href="#url-rewrite-2-1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Web PI で、 URL Rewrite を検索すれば 2.1 のバージョンのURL Rewrite モジュールを見つけて、Web Deploy 3.6 for Hosting Servers と同様にインストールできます。</p>
-<p>日本語UIのOSで検索すると、 URL Rewrite 2.0 が見つかりますが、こちらで問題ありません。インストール後に、 <code class="docutils literal"><span class="pre">C:\Windows\System32\inetsrv\rewrite.dll</span></code> のバージョンを確認すると 7.1.1980 になっているので、バージョン 2.1であることを確認できます。</p>
+<p>日本語UIのOSで検索すると、 URL Rewrite 2.0 が見つかりますが、こちらで問題ありません。インストール後に、 <code class="docutils literal notranslate"><span class="pre">C:\Windows\System32\inetsrv\rewrite.dll</span></code> のバージョンを確認すると 7.1.1980 になっているので、バージョン 2.1であることを確認できます。</p>
 <div class="figure">
 <img alt="../_images/pre-sif04.png" src="../_images/pre-sif04.png" />
 </div>
@@ -222,9 +215,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -246,7 +237,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -265,6 +256,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0',
+            LANGUAGE:'ja',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -283,14 +275,13 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

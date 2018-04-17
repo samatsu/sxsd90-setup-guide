@@ -5,7 +5,9 @@ Sitecore Experience Platform 環境をセットアップしていきます。
 
 リソースのダウンロード
 ================================================================
-`<https://dev.sitecore.net/>`__ にアクセスして、 最新の Sitecore 9 の構成ファイルをダウンロードします。今回は、Sitecore Experience Platform 9.0 rev. 171002 (9.0 Initial Release) をインストール前提で、手順を記載していきます。
+Sitecore Developer Foundationまはた、Sitecore エクスペリエンスソリューションデベロッパートレーニングを受講する受講生の場合は、トレーニング受講前もしくは、受講後に案内されるサイトから　Sitecore 9.0.0 rev. 171002 (WDP XP0 packages).zip　ファイルを取得します。
+
+最新のバージョンを使用したい場合は、`<https://dev.sitecore.net/>`__ にアクセスして、必要なバージョンをダウンロードします。 今回は Sitecore 9 の構成ファイルをダウンロードします。今回は、Sitecore Experience Platform 9.0 rev. 171002 (9.0 Initial Release) をインストール前提で、手順を記載していきます。
 
 Sitecore 9.0 の Initial Release は `こちら <https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Initial_Release.aspx>`__ からダウンロードできます。
 
@@ -44,15 +46,15 @@ Installation Guide の PDFからスクリプトをコピーして作成するの
 .. csv-table:: インストールスクリプトのパラメーター例
  :header: "パラメーター", "値"
 
- $prefix , \\"xp0\\"
- $PSScriptRoot , \\"C:\resourcefiles\\"
- $XConnectCollectionService , \\"$prefix.xconnect\\" 
- $sitecoreSiteName , \\"$prefix.sc\\"
- $SolrUrl , \\"\https://localhost:8983/solr\\" 
- $SolrRoot , \\"C:\Solr-6.6.1\\"
- $SolrService , \\"Solr-6.6.1\\" 
- $SqlServer , \\".\\"
- $SqlAdminUser , \\"sa\\" 
+ $prefix , \"tac.corporate\"
+ $PSScriptRoot , \"C:\resourcefiles\"
+ $XConnectCollectionService , \"$prefix.xconnect\" 
+ $sitecoreSiteName , \"$prefix\"
+ $SolrUrl , \"\https://localhost:8983/solr\" 
+ $SolrRoot , \"C:\Solr-6.6.2\"
+ $SolrService , \"Solr-6.6.2\" 
+ $SqlServer , \".\"
+ $SqlAdminUser , \"sa\" 
  $SqlAdminPassword , saユーザーのパスワード
 
 .. note:: SqlAdminPassword は SQL Server をインストール時に指定したsaユーザーのパスワードを設定してください。
@@ -87,8 +89,8 @@ PowerShellを管理者モードで起動して、作成した Install.ps1 を実
 
 .. figure:: /images/installation/ins-sc06.png
 
-ブラウザーを起動して、 `http://xp0.sc` にアクセスします。デフォルトのトップページが表示されることを確認します。
+ブラウザーを起動して、 `http://tac.corporate` にアクセスします。デフォルトのトップページが表示されることを確認します。
 
-また、`http://xp0.sc/sitecore` にアクセスして、デフォルトの admin の パスワード `admin/b` でラウンチパッドにログインできることを確認します。
+また、`http://tac.corporate/sitecore` にアクセスして、デフォルトの admin の パスワード `admin/b` でラウンチパッドにログインできることを確認します。
 
 .. note:: インストール用の設定ファイルで別のパスワードを指定している場合は、そのパスワードでログインして下さい。

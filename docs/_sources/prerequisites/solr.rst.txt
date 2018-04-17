@@ -35,11 +35,11 @@ Solrのインストール
 ================================================================
 続いて、Solrをインストールします。といってもzipファイルをダウンロードして展開するだけです。
 
-`ここ <https://archive.apache.org/dist/lucene/solr/6.6.1/>`__ から、 ``solr-6.6.1.zip`` をダウンロードします。
+`ここ <https://archive.apache.org/dist/lucene/solr/6.6.2/>`__ から、 ``solr-6.6.2.zip`` をダウンロードします。
 
 ダウンロードしたファイルを **右クリック > プロパティ** で、 **ブロックの解除** を選択して、**適用ボタン** をクリックします。
 
-zipファイルを展開し、適当な場所に配置します。今回は、 ``C:\`` 直下に、展開した ``solr-6.6.1`` フォルダーを配置した前提で、説明を記載しまsう。
+zipファイルを展開し、適当な場所に配置します。今回は、 ``C:\`` 直下に、展開した ``solr-6.6.2`` フォルダーを配置した前提で、説明を記載します。
 
 .. figure:: /images/prerequisites/pre-solr03.png
 
@@ -119,9 +119,9 @@ solrでjks ファイルを使用するので作成した jks ファイルをコ�
 
 .. code-block:: bat
 
- copy solr-ssl.keystore.jks C:\solr-6.6.1\server\etc
+ copy solr-ssl.keystore.jks C:\solr-6.6.2\server\etc
 
-Solrで、jksファイルを使用するように設定ファイルを変更します。``C:\solr-6.6.1\bin\solr.in.cmd``  をメモ帳で開きます。
+Solrで、jksファイルを使用するように設定ファイルを変更します。``C:\solr-6.6.2\bin\solr.in.cmd``  をメモ帳で開きます。
 
 デフォルトで次のように設定されている場所を見つけ、コメントを解除します。
 
@@ -157,3 +157,5 @@ Solrで、jksファイルを使用するように設定ファイルを変更し�
 
 .. figure:: /images/prerequisites/pre-solr13.png
 
+
+.. note:: SolrをWindowsサービスとして動作させたい場合は、 `NSSM <https://nssm.cc>`__ をご利用ください。検索エンジンを使用するとNSSMを使って、WindowsサービスとしてSolrを動作させる方法を紹介するサイトが見つかります。

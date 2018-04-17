@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -25,26 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="検索" href="../search.html"/>
-    <link rel="top" title="クイックセットアップガイド 1.0 ドキュメント" href="../index.html"/>
-        <link rel="up" title="補足情報" href="index.html"/>
-        <link rel="prev" title="レジストリ キー へのアクセスが拒否されました。エラーの回避" href="registoryerror.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="インストール手順の動画" href="video.html" />
+    <link rel="prev" title="レジストリ キー へのアクセスが拒否されました。エラーの回避" href="registoryerror.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -101,6 +94,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#id3">日本語をデフォルトにするインクルードファイルを配置</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="video.html">インストール手順の動画</a></li>
 </ul>
 </li>
 </ul>
@@ -114,7 +108,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">クイックセットアップガイド</a>
@@ -122,9 +116,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -186,20 +181,12 @@
 <li>編集するコンテンツの言語</li>
 <li>デフォルトのライブサイトの言語</li>
 </ul>
-<p>Sitecore がインストールされたフォルダーの <code class="docutils literal"><span class="pre">App_Config\Sitecore\CMS.Core</span></code> をエクスプローラーで開きます。 例えば、 C:inetpubwwwrootxp0.scApp_ConfigSitecoreCMS.Core となります。
-フォルダーの、Sitecore.DefaultLanguage.config をコピーします。</p>
+<p>Sitecore がインストールされたフォルダーの <code class="docutils literal notranslate"><span class="pre">App_Config\Include\Examples</span></code> をエクスプローラーで開きます。 例えば、 <code class="docutils literal notranslate"><span class="pre">C:\inetpub\wwwroot\tac.corporate\App_Config\Include\Examples</span></code> となります。
+フォルダーの、<code class="docutils literal notranslate"><span class="pre">ja-JP.config.example</span></code> を <code class="docutils literal notranslate"><span class="pre">ja-JP.config</span></code> にリネームします。</p>
 <div class="figure">
 <img alt="../_images/misc-japanese-ui02.png" src="../_images/misc-japanese-ui02.png" />
 </div>
-<p>コピーしたファイルを <code class="docutils literal"><span class="pre">App_Config\Include</span></code> フォルダーに貼り付けす。</p>
-<div class="figure">
-<img alt="../_images/misc-japanese-ui03.png" src="../_images/misc-japanese-ui03.png" />
-</div>
-<p>ファイルを開き、 <code class="docutils literal"><span class="pre">en</span></code> が設定されている箇所を <code class="docutils literal"><span class="pre">ja-jp</span></code> に変更します(4箇所あります)。</p>
-<div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">マルチサイトを実装する場合は、既存の設定を参考にして、追加したサイトのデフォルトの言語を変更してください。</p>
-</div>
+<p>ファイルを開くと、shell のサイト(コンテンツエディターなどの編集環境でのデフォルトの編集言語)やライブサイト(website)のデフォルトの言語バージョン、ClientLanguage(編集ツール自身のデフォルトの言語)が ja-jp となるようにパッチが構成されていることがわかります。</p>
 <p>これで、ライブサイトや、編集環境のUIおよび編集用のコンテンツの言語がデフォルトで日本語になります。</p>
 <div class="figure">
 <img alt="../_images/misc-japanese-ui04.png" src="../_images/misc-japanese-ui04.png" />
@@ -209,13 +196,13 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="video.html" class="btn btn-neutral float-right" title="インストール手順の動画" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="registoryerror.html" class="btn btn-neutral" title="レジストリ キー へのアクセスが拒否されました。エラーの回避" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -231,7 +218,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -250,6 +237,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0',
+            LANGUAGE:'ja',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -268,14 +256,13 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
