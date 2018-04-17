@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Sitecore 9.0 クイックセットアップガイド
+開発者向けトレーニング用 Sitecore9.0環境クイックセットアップガイド
 ======================================================================
 このドキュメントでは、Sitecore Experience Solutions Developer for v9.0 および Sitecore 9 Developer Foundations を受講する受講生が、演習用に単一サーバー上で動作する Sitecore 9.0環境 をローカルのPC上にを構築する手順を記載します。
 インストールに利用したソフトウェアのバージョンは次の通りです。
