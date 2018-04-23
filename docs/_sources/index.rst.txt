@@ -12,7 +12,7 @@
   :Detabase:    SQL Server 2016 SP1 Developer Edition
   :Sitecore:    9.0 Initial Release
 
-SQL Server は Express です動作しますが、Visual Studio Community Editionと同様に SQL Server Deloper Edition も無償でWebから入手できます。
+Visual Studio Community Editionと同様に SQL Server Deloper Edition も無償でWebから入手できます。また、Expressでも問題なく動作するはずです。
 
 .. warning:: 単一サーバーで動作するスタンドアロン(XP0)環境を構築する場合は、 Windows Server 2016 以降かWindows 10をご利用ください。
 
